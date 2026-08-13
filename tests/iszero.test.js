@@ -25,7 +25,7 @@ describe("IsZero", function () {
   });
 
   it("rejects a forged witness", async () => {
-    // in = 5, out = 1, inv = 0 — the lie your second constraint must block
+    // in = 5, out = 1, inv = 0 
     await assert.rejects(circuit.checkConstraints([1n, 1n, 5n, 0n]));
   });
 });
